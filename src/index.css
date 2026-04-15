@@ -113,10 +113,20 @@ code {
 
 #planes-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 320px));
-  gap: 20px;
-  justify-content: center;
+  gap: 16px;
+  grid-template-columns: repeat(4, 1fr);
+}
 
+@media (max-width: 1024px) {
+  #planes-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  #planes-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 #filtros-container {
